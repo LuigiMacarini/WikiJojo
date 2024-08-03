@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel-images');
-    const images = document.querySelectorAll('.carousel-images img');
+    const carrossel = document.querySelector('.carrossel-images');
+    const images = document.querySelectorAll(".carrossel-images img");
     const totalImages = images.length;
     let index = 0;
 
-    function showNextImage() {
+    function nextImage() {
         index++;
-        if (index >= totalImages) {
-            index = 0;
-        }
-        const offset = -index * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-    }
-
-    setInterval(showNextImage, 2500); 
+        if (index >= totalImages) {index = 0;}
+        const descolc = -index * 100;
+        carrossel.style.transform = `translateX(${descolc}%)`;}setInterval(nextImage, 2500); 
 });
